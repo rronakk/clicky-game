@@ -3,7 +3,7 @@ import "./FriendCard.css";
 
 const FriendCard = props => (
   <div className="card">
-    <div className="img-container">
+    <div className="img-container" onClick={() => props.shuffle(props.id)}>
       <img alt={props.name} src={props.image} />
     </div>
     <div className="content">
@@ -19,7 +19,6 @@ const FriendCard = props => (
         </li>
       </ul>
     </div>
-    <span className="remove" onClick={() => props.removeFriend(props.id)}>𝘅</span>
   </div>
 );
 
